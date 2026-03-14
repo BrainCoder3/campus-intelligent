@@ -1,0 +1,2 @@
+Maintenant code moi cette platform en nextjs en utilisant un disign moderne le faisant tres bien  dans un projet nomme campus-API
+fait le avec couleur de base le bleu le cyan et le rouge 

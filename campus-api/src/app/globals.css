@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0F172A;     /* Deep modern blue for backgrounds */
+  --color-secondary: #00E5FF;   /* Vibrant cyan for accents/glows */
+  --color-danger: #FF3366;      /* Modern red for interactions */
+  
+  --color-surface: rgba(15, 23, 42, 0.6);
+  --color-surface-hover: rgba(30, 41, 59, 0.8);
+}
+
+@layer base {
+  body {
+    background: radial-gradient(circle at top left, #1a202c, #0f172a 60%, #000000);
+    color: #f8fafc;
+    min-height: 100vh;
+    font-family: inherit;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface backdrop-blur-xl border border-white/10 rounded-2xl shadow-xl transition-all duration-300;
+  }
+  
+  .glass-panel:hover {
+    @apply bg-surface-hover border-secondary/50 shadow-[0_0_15px_rgba(0,229,255,0.3)];
+  }
+  
+  .btn-primary {
+    @apply relative overflow-hidden bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold py-2 px-6 rounded-lg shadow-[0_0_10px_rgba(0,229,255,0.4)] transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,229,255,0.6)] hover:scale-105;
+  }
+  
+  .btn-danger {
+    @apply relative bg-gradient-to-r from-red-600 to-danger text-white font-semibold py-2 px-6 rounded-lg shadow-[0_0_10px_rgba(255,51,102,0.4)] transition-all duration-300 hover:shadow-[0_0_20px_rgba(255,51,102,0.6)] hover:scale-105;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

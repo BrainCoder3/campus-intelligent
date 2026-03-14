@@ -1,0 +1,948 @@
+  
+Logo ici  
+ 
+Ecole Nationale des Sciences Appliquées de Tetouan 
+RAPPORT DE PROJET 
+Plateforme intelligente d’assistance académique basée 
+sur l’intelligence artificielle 
+École Nationale des Sciences Appliquées de Tétouan 
+Réalisé par 
+• SOULAMA DOUBIE JUDICAEL NOE — Big Data et Intelligence Artificielle 
+• YASSIR MOUSSA — Cybersécurité 
+• DAO AMBDOU RAFIOU — Cybersécurité 
+• OWUSU JUSTIN AFFUL — Génie Civil 
+ 
+ 
+Année universitaire 
+2025 – 2026 
+Résumé 
+Avec l’évolution des technologies numériques, les universités cherchent à améliorer 
+l’accès aux ressources pédagogiques et à faciliter l’accompagnement des étudiants. 
+Dans ce projet, nous proposons la conception d’une plateforme intelligente 
+d’assistance académique basée sur l’intégration de technologies web modernes et de 
+l’intelligence artificielle. 
+L’objectif principal est de développer un système capable d’aider les étudiants dans leur 
+apprentissage en leur proposant des outils tels que : 
+• la génération automatique de quiz et d’exercices 
+• des recommandations de révision personnalisées 
+• l’analyse des performances académiques. 
+Cette plateforme permettra également aux enseignants de suivre plus facilement la 
+progression des étudiants. 
+Table des matières 
+1. Introduction 
+  1.1 Contexte général 
+  1.2 Présentation du sujet 
+  1.3 Organisation du rapport 
+2. Problématique 
+  2.1 Limites des systèmes actuels 
+  2.2 Difficultés rencontrées par les étudiants 
+3. Objectifs du projet 
+  3.1 Objectif général 
+  3.2 Objectifs spécifiques 
+4. Présentation de la solution proposée 
+  4.1 Description générale de la plateforme 
+  4.2 Utilisateurs de la plateforme 
+5. Fonctionnalités principales 
+  5.1 Fonctionnalités pour les étudiants 
+  5.2 Fonctionnalités pour les enseignants 
+6. Technologies utilisées 
+  6.1 Technologies Frontend 
+  6.2 Technologies Backend 
+  6.3 Base de données 
+  6.4 Technologies d’intelligence artificielle 
+7. Architecture technique de la solution 
+  7.1 Interface utilisateur (Frontend) 
+  7.2 Serveur Backend 
+  7.3 Base de données 
+  7.4 Module d’intelligence artificielle 
+  7.5 Infrastructure et hébergement 
+  7.6 Intégration d’une API d’intelligence artificielle 
+8. Modélisation du système 
+  8.1 Diagramme d’architecture 
+  8.2 Diagramme UML (cas d’utilisation) 
+  8.3 Diagramme de flux de données 
+9. Faisabilité du projet 
+  9.1 Faisabilité technique 
+  9.2 Faisabilité organisationnelle 
+10. Conclusion et perspectives 
+  10.1 Conclusion 
+  10.2 Perspectives d’amélioration 
+ 
+ 
+ 
+  
+ 
+1. Introduction 
+1.1 Contexte général 
+Les établissements universitaires jouent un rôle fondamental dans la formation des 
+étudiants et dans le développement des compétences nécessaires au monde 
+professionnel. Cependant, avec l’augmentation constante du nombre d’étudiants et la 
+complexification des parcours académiques, les universités doivent aujourd’hui faire face 
+à de nouveaux défis en matière de gestion administrative et d’accompagnement 
+pédagogique. 
+Malgré les progrès importants réalisés dans le domaine des technologies de l’information 
+et de la communication, de nombreuses universités continuent d’utiliser des systèmes 
+administratifs et pédagogiques relativement traditionnels. Ces systèmes reposent encore 
+souvent sur des processus manuels ou semi-numériques qui peuvent ralentir certaines 
+procédures et limiter l’efficacité des services proposés aux étudiants. 
+Par ailleurs, les besoins des étudiants évoluent rapidement. Les étudiants d’aujourd’hui 
+sont de plus en plus habitués à utiliser des outils numériques intelligents capables de leur 
+fournir des informations rapidement et de manière personnalisée. Dans ce contexte, les 
+universités doivent repenser leurs systèmes afin de proposer des solutions plus 
+modernes, plus efficaces et mieux adaptées aux attentes des utilisateurs. 
+L’émergence de technologies telles que l’intelligence artificielle offre aujourd’hui de 
+nouvelles opportunités pour améliorer la gestion universitaire et proposer des services 
+innovants capables d’accompagner les étudiants tout au long de leur parcours 
+académique. 
+ 
+1.2 Constats principaux 
+Dans de nombreux établissements universitaires, plusieurs difficultés persistent encore 
+au niveau administratif et pédagogique. 
+Tout d’abord, les procédures administratives restent souvent longues et complexes. Les 
+étudiants doivent généralement se rendre physiquement dans différents services pour 
+effectuer certaines démarches administratives, comme la demande de documents 
+officiels, la validation de dossiers ou encore l’obtention d’attestations. 
+Ensuite, l’obtention de documents administratifs peut prendre plusieurs jours, voire 
+plusieurs semaines, ce qui peut retarder certaines démarches importantes pour les 
+étudiants, notamment dans le cadre de stages, de candidatures ou de procédures 
+administratives externes. 
+De plus, les services administratifs sont fréquemment confrontés à un grand nombre de 
+demandes simultanées, ce qui entraîne souvent la formation de longues files d’attente et 
+une surcharge de travail pour le personnel administratif. 
+Au niveau académique, les étudiants rencontrent également plusieurs difficultés. 
+Beaucoup d’entre eux ont du mal à organiser efficacement leurs révisions et à identifier les 
+chapitres qu’ils doivent approfondir. Certains étudiants manquent également de repères 
+pour évaluer leur niveau de préparation avant les examens. 
+Du côté des enseignants, il n’est pas toujours facile de disposer d’outils permettant 
+d’analyser rapidement et précisément les performances des étudiants. Les enseignants 
+doivent souvent se baser uniquement sur les résultats d’examens ou sur leur expérience 
+personnelle pour identifier les chapitres les plus difficiles pour les étudiants. 
+Ces différents constats montrent qu’il existe un besoin réel d’outils numériques 
+intelligents capables d’améliorer à la fois la gestion administrative et l’accompagnement 
+pédagogique dans les universités. 
+ 
+1.3 Présentation du projet 
+Afin de répondre à ces différentes problématiques, ce projet propose la conception et le 
+développement d’une plateforme numérique intelligente destinée à améliorer 
+l’expérience universitaire des étudiants et des enseignants. 
+Cette plateforme prendra la forme d’un système accessible à la fois via une application 
+web et une application mobile, permettant aux utilisateurs d’accéder facilement aux 
+différents services proposés. 
+L’un des éléments centraux de cette solution repose sur l’intégration de fonctionnalités 
+basées sur l’intelligence artificielle. Ces fonctionnalités permettront notamment 
+d’automatiser certaines tâches administratives, d’accompagner les étudiants dans leur 
+apprentissage et de fournir aux enseignants des outils d’analyse avancés. 
+La plateforme sera conçue comme un assistant académique et administratif intelligent, 
+capable d’interagir avec les utilisateurs, de comprendre leurs besoins et de leur proposer 
+des solutions adaptées. 
+L’objectif est de créer un environnement numérique qui facilite l’accès aux services 
+universitaires tout en améliorant la qualité de l’accompagnement pédagogique. 
+ 
+1.4 Objectif général du projet 
+L’objectif principal de ce projet est de concevoir une plateforme numérique intelligente 
+capable d’améliorer le fonctionnement du système universitaire en combinant les 
+technologies du numérique et de l’intelligence artificielle. 
+Plus précisément, cette plateforme devra permettre de simplifier certaines démarches 
+administratives en offrant aux étudiants la possibilité de faire leurs demandes directement 
+en ligne, sans avoir besoin de se déplacer physiquement dans les services administratifs. 
+Elle devra également accompagner les étudiants dans leur parcours académique en leur 
+proposant des outils intelligents capables de les aider à mieux organiser leurs révisions, à 
+comprendre les concepts difficiles et à évaluer leur niveau de préparation avant les 
+examens. 
+Par ailleurs, la plateforme devra fournir aux enseignants des outils d’analyse permettant 
+d’obtenir une vision plus claire des performances des étudiants, d’identifier les chapitres 
+les plus complexes et d’adapter leurs méthodes pédagogiques en conséquence. 
+Ainsi, cette solution vise à créer un système plus efficace, plus interactif et plus adapté 
+aux besoins actuels de l’enseignement supérieur. 
+ 
+2. Problématique 
+2.1 Problèmes administratifs 
+Dans de nombreuses universités, les procédures administratives reposent encore 
+largement sur des méthodes traditionnelles qui peuvent être longues et inefficaces. 
+Les étudiants doivent souvent se déplacer physiquement pour effectuer certaines 
+démarches administratives, telles que la demande d’attestations, la récupération de 
+documents officiels ou la validation de certaines informations académiques. 
+La gestion des demandes se fait parfois de manière manuelle, ce qui peut entraîner des 
+erreurs, des retards et une surcharge de travail pour le personnel administratif. 
+De plus, les délais de traitement peuvent être relativement longs, ce qui peut poser 
+problème pour les étudiants qui ont besoin de certains documents dans des délais courts, 
+notamment pour des démarches externes comme les candidatures à des stages ou à des 
+programmes d’échange. 
+Enfin, les procédures administratives ne sont pas toujours clairement expliquées aux 
+étudiants, ce qui peut entraîner des incompréhensions et des démarches répétées. 
+ 
+2.2 Problèmes académiques 
+Au niveau pédagogique, plusieurs difficultés peuvent également être observées. 
+Certains étudiants rencontrent des difficultés pour comprendre certains concepts ou 
+certains chapitres, en particulier dans les disciplines techniques ou scientifiques. 
+L’absence d’un accompagnement personnalisé peut rendre l’apprentissage plus difficile 
+pour certains profils d’étudiants. 
+De plus, les étudiants ne disposent pas toujours d’outils efficaces pour organiser leurs 
+révisions. Ils peuvent avoir du mal à déterminer quels chapitres doivent être prioritaires ou 
+à planifier leur temps de travail de manière optimale. 
+Par ailleurs, il est souvent difficile pour les étudiants d’évaluer leur niveau réel avant les 
+examens. Beaucoup d’entre eux ne savent pas s’ils sont suffisamment préparés ou s’ils 
+doivent encore approfondir certains sujets. 
+Ces difficultés montrent l’importance de développer des outils capables d’accompagner 
+les étudiants de manière plus personnalisée. 
+ 
+2.3 Limites du côté des enseignants 
+Les enseignants rencontrent également certaines limites dans le suivi pédagogique des 
+étudiants. 
+Dans de nombreux cas, ils ne disposent pas d’outils analytiques leur permettant de suivre 
+en détail les performances individuelles et collectives des étudiants. 
+Il peut également être difficile pour eux d’identifier rapidement les chapitres qui posent le 
+plus de difficultés à l’ensemble de la classe. Cette information pourrait pourtant être très 
+utile pour adapter les explications ou proposer des exercices supplémentaires. 
+De plus, les enseignants ne disposent pas toujours de systèmes permettant de générer 
+automatiquement des analyses ou des rapports pédagogiques qui pourraient les aider à 
+mieux comprendre l’évolution du niveau des étudiants au cours du semestre. 
+ 
+2.4 Synthèse du problème 
+À partir de ces différentes observations, il apparaît que le système universitaire actuel 
+présente plusieurs limites importantes. 
+Premièrement, la gestion administrative reste relativement lente et peu automatisée. 
+Deuxièmement, l’accompagnement académique proposé aux étudiants n’est pas toujours 
+suffisamment personnalisé pour répondre aux besoins individuels. 
+Troisièmement, les enseignants disposent de peu d’outils intelligents leur permettant 
+d’analyser efficacement les performances des étudiants et d’adapter leurs méthodes 
+pédagogiques. 
+Ces différentes limites montrent qu’il existe un réel potentiel d’amélioration grâce à 
+l’utilisation de solutions numériques innovantes. 
+ 
+2.5 Question centrale 
+Dans ce contexte, la question centrale qui guide ce projet peut être formulée de la manière 
+suivante : 
+Comment l’intelligence artificielle peut-elle être utilisée pour améliorer 
+simultanément la gestion administrative et l’accompagnement académique au sein 
+des universités, tout en facilitant le travail des enseignants et en améliorant 
+l’expérience des étudiants ? 
+3. Modèle scientifique de travail 
+Dans le cadre de notre projet, nous avons adopté un modèle scientifique structuré afin de 
+développer la solution proposée de manière organisée et logique. Ce modèle permet de passer 
+progressivement de l’identification d’un problème réel à la conception d’une solution innovante et 
+efficace. 
+Le processus repose sur cinq étapes principales. 
+3.1 Observation du problème 
+La première étape consiste à observer et identifier les problèmes existants dans l’environnement 
+universitaire. Nous avons constaté plusieurs difficultés rencontrées par les étudiants, notamment 
+les procédures administratives longues et les difficultés d’organisation des études et des révisions. 
+3.2 Analyse des besoins 
+Après l’observation du problème, nous avons réalisé une analyse des besoins des utilisateurs, 
+principalement les étudiants et les enseignants. Cette analyse nous a permis d’identifier les attentes 
+principales et de mieux comprendre les solutions possibles pour améliorer l’expérience 
+universitaire. 
+3.3 Conception de la solution 
+Sur la base de cette analyse, nous avons conçu une plateforme intelligente basée sur l’intelligence 
+artificielle. L’objectif de cette plateforme est de simplifier les démarches administratives, 
+d’améliorer l’accompagnement académique et d’aider les étudiants à mieux organiser leurs études. 
+3.4 Développement du prototype 
+Dans cette étape, nous avons imaginé le fonctionnement concret du système. Le prototype permet 
+de représenter les principales fonctionnalités de la plateforme ainsi que l’interaction entre les 
+différents utilisateurs et les services proposés. 
+3.5 Évaluation et amélioration 
+La dernière étape consiste à tester et évaluer la solution proposée. Les résultats obtenus 
+permettent d’identifier les points à améliorer afin d’optimiser les performances et l’efficacité de la 
+plateforme. 
+4. Conception collaborative du projet 
+La conception et le développement de ce projet reposent sur une approche collaborative 
+impliquant une équipe de quatre étudiants ingénieurs possédant des compétences 
+complémentaires. 
+Cette diversité de compétences permet d’aborder le projet sous plusieurs angles : 
+architecture du système, cybersécurité, faisabilité technique et intelligence 
+artificielle. 
+La collaboration entre ces différents domaines est essentielle afin de garantir la 
+conception d’une plateforme à la fois fonctionnelle, sécurisée, intelligente et 
+techniquement réalisable. 
+ 
+4.1 Composition de l’équipe 
+Le projet est réalisé par une équipe composée de quatre membres ayant chacun un rôle 
+spécifique dans la conception et l’analyse du système. 
+Nom 
+Domaine 
+Rôle dans le projet 
+Justin Owusu Afful 
+Génie civil 
+Conception architecturale et 
+organisation du projet 
+Rafiou Dao Ambdou 
+Cybersécurité 
+Analyse des risques et sécurité du 
+système 
+Moussa Yassir 
+Cybersécurité 
+Étude de faisabilité technique et 
+sécurité 
+Soulama Noé Judicael 
+Doubie 
+Big Data & Intelligence 
+Artificielle 
+Intégration de l’IA et analyse des 
+données 
+Chaque membre apporte ainsi une expertise spécifique permettant d’assurer une 
+conception globale et cohérente du projet. 
+ 
+4.2 Organisation du travail 
+Afin d’assurer une bonne répartition des responsabilités et une collaboration efficace, 
+l’équipe a mis en place une organisation structurée. 
+                   Chef de projet 
+                         │ 
+       ┌─────────────────┼─────────────────┐ 
+       │                 │                 │ 
+  Architecture        Sécurité       Intelligence artificielle 
+    (Justin)      (Rafiou & Yassir)          (Noé) 
+ 
+Chaque membre est responsable d’un domaine précis du projet. 
+ 
+Conception architecturale du projet 
+Tout d’abord, OWUSU JUSTIN AFFUL, élève ingénieur en génie civil, est chargé de la 
+conception architecturale du projet. 
+Son rôle consiste principalement à : 
+• définir la structure globale de la plateforme 
+• concevoir la maquette du système 
+• organiser les réunions de travail entre les membres de l’équipe 
+• établir le planning général du projet 
+• superviser l’avancement global du projet. 
+Il joue donc un rôle important dans la coordination de l’équipe et la vision globale du 
+système. 
+ 
+Analyse de la sécurité 
+Ensuite, DAO AMBDOU Rafiou, élève ingénieur en cybersécurité, est chargé de l’analyse 
+de la sécurité du projet. 
+Ses responsabilités incluent : 
+• l’identification des failles de sécurité potentielles 
+• l’analyse des risques liés à la gestion des données 
+• la proposition de mécanismes de protection du système 
+• l’étude des bonnes pratiques en matière de cybersécurité. 
+Son travail est essentiel afin de garantir que la plateforme respecte des standards élevés 
+de sécurité informatique, notamment en ce qui concerne la protection des données des 
+étudiants et des enseignants. 
+ 
+Étude de faisabilité et sécurité technique 
+Le troisième membre de l’équipe est MOUSSA YASSIR, également élève ingénieur en 
+cybersécurité. 
+Il est chargé de : 
+• l’étude de la faisabilité technique du projet 
+• l’analyse de l’environnement technologique nécessaire 
+• l’évaluation des différentes technologies pouvant être utilisées 
+• l’étude des solutions permettant d’assurer une sécurité optimale du système. 
+Son rôle permet de vérifier que les solutions envisagées sont réalistes, techniquement 
+réalisables et sécurisées. 
+ 
+Intégration de l’intelligence artificielle 
+Enfin, SOULAMA NOÉ JUDICAEL DOUBIE, élève ingénieur en Big Data et Intelligence 
+Artificielle, est chargé de la conception et de l’intégration de l’intelligence artificielle dans 
+la plateforme. 
+Ses responsabilités comprennent : 
+• l’étude des différentes solutions d’intelligence artificielle pouvant être intégrées 
+dans le projet 
+• le choix des modèles d’IA les plus adaptés 
+• l’analyse des données académiques 
+• l’optimisation de la précision et de la performance de l’IA. 
+Il est également responsable de la mise en place des systèmes permettant à l’intelligence 
+artificielle de : 
+• analyser les performances des étudiants 
+• générer des recommandations personnalisées 
+• proposer des outils d’apprentissage adaptés. 
+ 
+4.3 Méthode de collaboration 
+Afin d’assurer une bonne coordination entre les membres de l’équipe, une méthode de 
+travail collaborative a été mise en place. 
+Cette méthode repose sur plusieurs principes : 
+Réunions régulières 
+L’équipe organise des réunions tous les deux jours afin de : 
+• discuter de l’avancement du projet 
+• résoudre les problèmes rencontrés 
+• proposer de nouvelles idées. 
+ 
+Répartition des tâches 
+Les tâches sont réparties en fonction des compétences de chaque membre afin 
+d’optimiser l’efficacité du travail. 
+ 
+Mise à jour et partage des informations 
+Chaque membre met régulièrement à jour les autres membres de l’équipe concernant : 
+• les progrès réalisés 
+• les difficultés rencontrées 
+• les nouvelles propositions d’amélioration. 
+ 
+Suivi de l’avancement du projet 
+Un suivi continu du projet est assuré afin de : 
+• vérifier que les objectifs sont respectés 
+• ajuster les stratégies si nécessaire 
+• améliorer progressivement la conception de la plateforme. 
+ 
+Cette approche collaborative permet d’assurer une bonne coordination entre les 
+différents domaines d’expertise et de garantir la réussite du projet. 
+ 
+ 
+Voici la section complète 7 corrigée, cohérente et bien structurée, avec les 
+diagrammes placés aux bons endroits et l’ordre logique corrigé : 
+1. Frontend 
+2. Backend 
+3. Base de données 
+4. Module IA 
+5. Intégration API IA 
+6. Infrastructure 
+C’est la structure la plus logique pour un rapport d’ingénierie. 
+ 
+Voici le contenu du document que tu as envoyé, réécrit proprement pour que tu puisses 
+le copier directement dans ton document Word. 
+ 
+5.Description de la solution basée sur 
+l’intelligence artificielle 
+La solution proposée consiste en une plateforme numérique accessible via une 
+application web et mobile, destinée à améliorer l’expérience universitaire des étudiants 
+et des enseignants grâce à l’intégration de l’intelligence artificielle. 
+Cette plateforme vise à moderniser à la fois la gestion administrative et 
+l’accompagnement pédagogique au sein des établissements universitaires. 
+La plateforme comporte deux interfaces principales : 
+• une interface destinée aux étudiants 
+• une interface destinée aux enseignants 
+Chaque interface offre un ensemble de fonctionnalités spécifiques adaptées aux besoins 
+de ses utilisateurs. 
+ 
+5.1 Fonctionnalités pour les étudiants 
+5.1.1 Assistance administrative 
+Dans le but de simplifier les démarches administratives, la plateforme intègre un module 
+intelligent permettant aux étudiants d’effectuer certaines demandes directement en ligne. 
+Grâce à l’intelligence artificielle, les étudiants pourront : 
+• demander des documents administratifs si nécessaire 
+• générer automatiquement certains documents 
+• suivre l’état de leurs demandes en temps réel 
+Les documents pouvant être générés automatiquement incluent notamment : 
+• les certificats de scolarité 
+• les attestations d’inscription 
+• les relevés de notes 
+• les demandes de stage 
+Cette fonctionnalité permet de réduire considérablement les files d’attente dans les 
+services administratifs et d’accélérer le traitement des demandes. 
+ 
+5.1.2  Assistance académique 
+personnalisée 
+La plateforme intègre également un assistant académique intelligent capable d’analyser 
+les données académiques des étudiants. 
+L’intelligence artificielle analyse : 
+• les notes obtenues dans les différentes matières 
+• l’évolution des performances 
+• les résultats aux exercices et aux quiz 
+À partir de ces informations, l’IA peut : 
+• identifier les points forts de l’étudiant 
+• détecter ses lacunes 
+• proposer des recommandations personnalisées pour améliorer ses résultats. 
+Exemple d’analyse 
+Matière 
+Note 
+Recommandation 
+Mathématiques 10 
+Renforcer les 
+exercices 
+Programmation 17 
+Maintenir le niveau 
+Physique 
+9 
+Révision des bases 
+Cette approche permet d’offrir un accompagnement personnalisé adapté au niveau de 
+chaque étudiant. 
+ 
+5.1.3 Aide aux révisions et aux cours 
+La plateforme propose également un module d’aide à la révision basé sur l’intelligence 
+artificielle. 
+L’IA peut notamment : 
+• expliquer certains concepts difficiles 
+• générer automatiquement des flashcards 
+• créer des fiches de révision 
+• générer des quiz interactifs 
+• proposer des exercices adaptés au niveau de l’étudiant 
+• fournir une bibliothèque de ressources pédagogiques. 
+Ces outils permettent aux étudiants de réviser de manière plus efficace et plus 
+interactive. 
+ 
+5.1.4 Planification intelligente 
+La plateforme peut également générer un planning de révision personnalisé pour chaque 
+étudiant. 
+Ce planning est généré en prenant en compte plusieurs facteurs : 
+• les dates des examens 
+• le niveau de difficulté des matières 
+• les performances de l’étudiant 
+• les périodes de repos nécessaires. 
+Le système peut également : 
+• envoyer des notifications et rappels automatiques 
+• proposer des séances de révision optimisées 
+• générer un rapport hebdomadaire de progression. 
+Exemple de planning de révision 
+Lundi : Révision mathématiques 
+Mardi : Exercices de programmation 
+Mercredi : Révision physique 
+Jeudi : Quiz et exercices 
+Vendredi : Révision générale 
+Ce système permet aux étudiants de mieux organiser leur temps de travail et 
+d’optimiser leur préparation aux examens. 
+ 
+5.2 Fonctionnalités pour les enseignants 
+La plateforme propose également plusieurs fonctionnalités destinées aux enseignants afin 
+d’améliorer le suivi pédagogique des étudiants. 
+Les enseignants disposent notamment d’un tableau de bord intelligent permettant 
+d’analyser les performances des étudiants. 
+Les fonctionnalités incluent : 
+• un tableau de bord d’analyse des performances par module 
+• l’identification des chapitres les plus difficiles pour les étudiants 
+• des recommandations pédagogiques basées sur les données 
+• la génération automatique de rapports de semestre 
+• des analyses utiles pour les conseils de classe. 
+Ces outils permettent aux enseignants de mieux comprendre les besoins des étudiants 
+et d’adapter leurs méthodes pédagogiques. 
+ 
+6.  Faisabilité du projet 
+L’étude de faisabilité permet d’évaluer si le projet peut être réalisé en tenant compte des 
+ressources techniques, humaines et financières disponibles. 
+ 
+6.1 Faisabilité technique 
+Les technologies actuelles permettent de développer relativement facilement ce type de 
+plateforme numérique. 
+Plusieurs technologies modernes peuvent être utilisées pour la conception du système. 
+Technologies envisagées 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Composant 
+ 
+ 
+Technologies envisagées 
+Back-end 
+ Python (FastAPI / Django) 
+Front-end Web 
+ React.js / Next.js 
+Application Mobile 
+ Flutter / React Native 
+IA / NLP 
+ OpenAI API, LLaMA, Mistral 
+Base de données 
+ PostgreSQL + MongoDB 
+Authentification 
+ JWT + OAuth2 
+Déploiement 
+ Docker + Cloud (AWS / Azure) 
+ 
+Ces technologies offrent : 
+• de bonnes performances 
+• une grande flexibilité 
+• une forte sécurité 
+• une bonne capacité de mise à l’échelle. 
+ 
+6.2 Faisabilité économique 
+Le coût de développement de ce projet reste raisonnable dans le cadre d’un projet 
+académique ou d’un prototype. 
+Les principaux coûts concernent : 
+• le développement logiciel 
+• l’infrastructure serveur 
+• la maintenance du système. 
+Coûts estimés 
+Développement logiciel : ██████████ 
+Infrastructure serveur : ███████ 
+Maintenance : █████ 
+ 
+6.3 Faisabilité organisationnelle 
+Grâce à la composition de l’équipe et à la complémentarité des compétences des 
+membres, le projet est réalisable. 
+Chaque membre de l’équipe apporte une expertise spécifique dans un domaine 
+particulier : 
+• architecture du système 
+• cybersécurité 
+• intelligence artificielle 
+• analyse des données. 
+Cette organisation permet d’assurer une répartition efficace des tâches et une bonne 
+coordination du projet. 
+ 
+. 
+ 
+ 
+ 
+ 
+ 
+7. Architecture technique de la solution 
+La plateforme proposée repose sur une architecture logicielle moderne, modulaire et 
+évolutive, conçue afin d’assurer la scalabilité, la sécurité, la performance et la 
+maintenabilité du système. 
+Dans le cadre d’une application destinée à gérer des activités académiques et à intégrer 
+des fonctionnalités d’intelligence artificielle, il est essentiel d’adopter une architecture 
+permettant de séparer clairement les différentes responsabilités du système. 
+L’architecture choisie repose donc sur une organisation en plusieurs couches 
+fonctionnelles, chacune étant responsable d’un ensemble précis de tâches. Cette 
+approche facilite : 
+• la compréhension globale du système 
+• la maintenance du code 
+• l’évolution future de la plateforme 
+• l’intégration de nouvelles fonctionnalités. 
+Architecture générale du système 
+L’architecture globale de la plateforme peut être représentée par le diagramme suivant : 
+                Utilisateurs 
+          (Étudiants / Professeurs) 
+                       │ 
+            Interface Web / Mobile 
+                 (Frontend) 
+                       │ 
+                 API Backend 
+              (Serveur applicatif) 
+                       │ 
+                Base de données 
+                       │ 
+             Module Intelligence Artificielle 
+ 
+Dans cette architecture, chaque couche possède un rôle bien défini et communique 
+avec les autres composants via des interfaces standardisées. 
+graph TD 
+    subgraph "Couche Présentation (Frontend)" 
+        A[Application Web - React/Next.js] 
+        B[Application Mobile - Flutter] 
+    end 
+  
+    subgraph "Couche Application (Backend)" 
+        C[API Gateway / Express Server] 
+        D[Gestion Authentification] 
+        E[Logique Métier / Services] 
+    end 
+  
+    subgraph "Couche Données & Services" 
+        F[(Base de données PostgreSQL)] 
+        G[(Cache/NoSQL MongoDB)] 
+        H{API IA Externe - OpenAI/Claude} 
+    end 
+  
+    A & B <-->|Requêtes HTTP/REST| C 
+    C --> D 
+    C --> E 
+    E <--> F 
+    E <--> G 
+    E <-->|JSON Prompt/Response| H 
+  
+    style A fill:#f9f,stroke:#333,stroke-width:2px 
+    style B fill:#f9f,stroke:#333,stroke-width:2px 
+    style C fill:#bbf,stroke:#333,stroke-width:2px 
+    style H fill:#dfd,stroke:#333,stroke-width:2px 
+7.1 Interface utilisateur (Frontend) 
+Le Frontend correspond à la partie visible de la plateforme avec laquelle les utilisateurs 
+interagissent directement. 
+Il constitue le point d’entrée principal du système et permet aux différents acteurs — 
+notamment les étudiants et les enseignants — d’accéder aux fonctionnalités de la 
+plateforme. 
+À travers cette interface, les utilisateurs peuvent notamment : 
+• consulter les cours et les ressources pédagogiques 
+• générer ou consulter des documents administratifs 
+• planifier leurs sessions de révision 
+• accéder aux quiz et flashcards générés par l’intelligence artificielle 
+• consulter leurs statistiques d’apprentissage 
+• recevoir des recommandations personnalisées. 
+L’interface doit être conçue de manière à offrir une expérience utilisateur fluide, 
+intuitive et accessible. 
+Technologies envisagées 
+React / Next.js 
+Le frontend peut être développé à l’aide de React ou Next.js, deux frameworks JavaScript 
+largement utilisés pour la création d’applications web modernes. 
+Leurs avantages sont : 
+• interface rapide et interactive 
+• architecture basée sur des composants réutilisables 
+• grande flexibilité de développement 
+• large communauté de développeurs. 
+Flutter (application mobile) 
+Afin d’élargir l’accès à la plateforme, une application mobile peut être développée avec 
+Flutter, permettant de créer des applications Android et iOS à partir d’un seul code 
+source. 
+Les avantages de Flutter sont : 
+• développement rapide 
+• performances élevées 
+• interface utilisateur fluide. 
+Rôle du Frontend 
+Le frontend est responsable de : 
+• l’interaction avec les utilisateurs 
+• l’affichage des données provenant du serveur 
+• l’envoi des requêtes vers le backend 
+• la gestion de l’expérience utilisateur. 
+Les traitements complexes sont quant à eux effectués par la couche backend. 
+ 
+7.2 Serveur Backend 
+Le Backend constitue le cœur logique de la plateforme. 
+Il assure le traitement des requêtes envoyées par le frontend et coordonne les interactions 
+entre les différents composants du système. 
+Lorsqu’un utilisateur effectue une action sur la plateforme, la requête est transmise au 
+backend qui se charge : 
+1. d’analyser la requête 
+2. de récupérer les données nécessaires 
+3. de communiquer avec les modules d’intelligence artificielle 
+4. de renvoyer une réponse au frontend. 
+Fonctions principales du backend 
+Le backend assure plusieurs fonctions essentielles : 
+• gestion de l’authentification 
+• gestion des comptes utilisateurs 
+• gestion des cours et ressources pédagogiques 
+• traitement des demandes administratives 
+• communication avec la base de données 
+• communication avec les services d’intelligence artificielle 
+• sécurisation des échanges de données. 
+Technologies possibles 
+Node.js / Express 
+Le backend peut être développé avec Node.js et Express, qui permettent de créer des API 
+performantes et évolutives. 
+Les avantages sont : 
+• rapidité de traitement des requêtes 
+• grande flexibilité 
+• forte compatibilité avec les technologies web modernes. 
+API REST 
+La communication entre le frontend et le backend peut être réalisée via une API REST 
+utilisant des requêtes HTTP standard. 
+Cette architecture permet : 
+• une séparation claire des responsabilités 
+• une meilleure modularité du système 
+• une maintenance simplifiée. 
+ 
+7.3 Base de données 
+La base de données est un élément central du système. 
+Elle permet de stocker et d’organiser l’ensemble des informations nécessaires au 
+fonctionnement de la plateforme. 
+Données stockées 
+La base de données peut contenir : 
+• les profils des étudiants 
+• les profils des enseignants 
+• les notes académiques 
+• les historiques d’apprentissage 
+• les documents administratifs générés 
+• les résultats des quiz 
+• les statistiques d’utilisation. 
+Ces données constituent également une source importante pour les analyses réalisées 
+par l’intelligence artificielle. 
+Technologies possibles 
+PostgreSQL 
+Une base relationnelle comme PostgreSQL peut être utilisée pour stocker les données 
+structurées. 
+Ses avantages sont : 
+• fiabilité élevée 
+• sécurité avancée 
+• gestion efficace des relations entre les données. 
+MongoDB 
+Certaines données non structurées peuvent être stockées dans une base NoSQL comme 
+MongoDB, notamment : 
+• les interactions avec l’IA 
+• les historiques d’apprentissage. 
+Cette combinaison permet de bénéficier des avantages des bases relationnelles et 
+NoSQL. 
+ 
+7.4 Module d’intelligence artificielle 
+Le module d’intelligence artificielle constitue l’élément innovant de la plateforme. 
+Son objectif est d’analyser les données académiques afin d’aider les étudiants à améliorer 
+leur apprentissage. 
+Fonctions principales 
+Le module IA peut effectuer : 
+• l’analyse des performances des étudiants 
+• l’identification des difficultés d’apprentissage 
+• la génération automatique de quiz et flashcards 
+• la recommandation de méthodes de révision 
+• la création de rapports pédagogiques pour les enseignants. 
+Cependant, développer un modèle d’IA complet nécessite beaucoup de données et de 
+ressources. 
+Pour cette raison, la plateforme prévoit l’intégration d’une API d’intelligence artificielle 
+existante. 
+ 
+7.5 Intégration d’une API d’intelligence 
+artificielle 
+Afin de rendre le projet réalisable dans un cadre académique, la plateforme prévoit 
+l’intégration d’une API d’intelligence artificielle existante. 
+Cette approche permet de bénéficier de modèles performants sans avoir à entraîner un 
+modèle complet. 
+Principe de fonctionnement 
+Le fonctionnement repose sur la communication entre le backend et l’API d’intelligence 
+artificielle. 
+Utilisateur 
+     │ 
+Application (Frontend) 
+     │ 
+Serveur Backend 
+     │ 
+API d’intelligence artificielle 
+     │ 
+Réponse générée par l’IA 
+     │ 
+Retour vers l’utilisateur 
+ 
+sequenceDiagram 
+    participant U as Étudiant 
+    participant F as Frontend (React) 
+    participant B as Backend (Node.js) 
+    participant DB as Base de données 
+    participant IA as API Intelligence Artificielle 
+  
+    U->>F: Clique sur "Générer un Quiz" 
+    F->>B: POST /api/generate-quiz (Token + ID_Cours) 
+    B->>DB: Récupérer contenu du cours 
+    DB-->>B: Données textuelles du cours 
+    B->>IA: Envoyer Prompt (Données cours + Format JSON) 
+    Note over IA: Traitement du modèle LLM 
+    IA-->>B: Retourne Questions/Réponses (JSON) 
+    B->>DB: Sauvegarder le quiz généré 
+    B-->>F: Envoi du Quiz (200 OK) 
+    F-->>U: Affiche le Quiz interactif 
+ 
+Le backend envoie à l’API des informations telles que : 
+• une question d’un étudiant 
+• un chapitre à réviser 
+• les résultats académiques. 
+L’API génère ensuite une réponse intelligente. 
+Fonctionnalités basées sur l’IA 
+Grâce à cette intégration, la plateforme peut offrir : 
+Assistant pédagogique 
+L’IA peut répondre aux questions des étudiants concernant leurs cours. 
+Génération de quiz 
+L’IA peut créer automatiquement : 
+• quiz 
+• flashcards 
+• exercices. 
+Analyse des performances 
+L’IA analyse les notes pour identifier les points faibles. 
+Recommandations personnalisées 
+La plateforme peut proposer : 
+• des chapitres à réviser 
+• des exercices supplémentaires 
+• un planning de révision personnalisé. 
+ 
+7.6 Infrastructure et hébergement 
+Pour assurer la disponibilité et la fiabilité du système, la plateforme doit être déployée sur 
+une infrastructure cloud moderne. 
+Diagramme de déploiement simplifié 
+          Utilisateurs 
+                │ 
+        Navigateur / Mobile 
+                │ 
+          Serveur Frontend 
+                │ 
+            API Backend 
+                │ 
+        Base de données Cloud 
+                │ 
+         Services IA externes 
+ 
+graph LR 
+    subgraph "Internet" 
+        User((Utilisateurs)) 
+    end 
+  
+    subgraph "Cloud Infrastructure (AWS/Azure/GCP)" 
+        LB[Load Balancer] 
+         
+        subgraph "Cluster d'Application" 
+            S1[Serveur Web 1] 
+            S2[Serveur Web 2] 
+        end 
+  
+        subgraph "Managed Services" 
+            DB[(PostgreSQL Managed)] 
+            Storage[(Stockage Cloud S3)] 
+        end 
+    end 
+  
+    subgraph "External" 
+        AI_Service(API IA Service) 
+    end 
+  
+    User -->|HTTPS| LB 
+    LB --> S1 
+    LB --> S2 
+    S1 & S2 <--> DB 
+    S1 & S2 <--> Storage 
+    S1 & S2 <--> AI_Service 
+ 
+Solutions cloud possibles 
+La plateforme peut être hébergée sur : 
+• Amazon Web Services (AWS) 
+• Google Cloud Platform 
+• Microsoft Azure. 
+Ces solutions offrent : 
+• haute disponibilité 
+• capacité d’adaptation au nombre d’utilisateurs 
+• sécurité avancée 
+• facilité de maintenance. 
+ 
+Conclusion de l’architecture technique 
+L’architecture technique proposée repose sur une structure modulaire, évolutive et 
+sécurisée. 
+Cette architecture permet : 
+• une bonne performance du système 
+• une gestion efficace des données 
+• une intégration simple des services d’intelligence artificielle 
+• une expérience utilisateur fluide. 
+Elle constitue ainsi une base solide pour le développement d’une plateforme 
+pédagogique intelligente capable d’accompagner les étudiants dans leur 
+apprentissage et d’assister les enseignants dans le suivi académique.  
+ 
+8. Gouvernance du projet 
+La gouvernance du projet concerne l’organisation, la gestion et la prise de décision tout au long du 
+développement du projet. 
+Dans notre cas, les décisions sont prises collectivement lors des réunions d’équipe, ce qui permet à 
+chaque membre de participer activement et de proposer des idées pour améliorer le projet. 
+8.1 Organisation de l’équipe 
+Le travail est réparti entre les membres de l’équipe selon leurs compétences et leurs 
+responsabilités. Cette organisation permet d’assurer une meilleure coordination et une progression 
+efficace dans la réalisation du projet. 
+8.2 Gestion des risques 
+Pendant le développement du projet, plusieurs risques potentiels ont été identifiés : 
+• 
+- Retard de développement : ce problème peut être évité grâce à une bonne planification et une 
+gestion efficace du temps. 
+• 
+- Problèmes techniques : ils peuvent être réduits grâce à des tests réguliers et une vérification 
+continue du système. 
+• 
+- Désaccords dans l’équipe : ils peuvent être résolus grâce à une communication ouverte et une 
+collaboration constructive entre les membres. 
+8.3 Amélioration continue 
+Notre projet repose également sur un principe d’amélioration continue. Cela signifie que la 
+plateforme pourra évoluer et être améliorée grâce aux retours des utilisateurs, aux résultats des 
+tests réalisés et aux nouvelles idées proposées par l’équipe.  
+ 
+ 
+9. Conclusion 
+9.1 Résumé du projet 
+Le projet présenté dans ce rapport propose la conception d’une plateforme numérique intelligente 
+destinée à améliorer plusieurs aspects du fonctionnement universitaire. 
+Cette plateforme permettra notamment de simplifier les démarches administratives, 
+d’accompagner les étudiants dans leur apprentissage et de fournir aux enseignants des outils 
+d’analyse plus performants. 
+Grâce à l’intégration de technologies modernes et de fonctionnalités basées sur l’intelligence 
+artificielle, la plateforme pourra offrir un ensemble de services capables de répondre aux besoins 
+actuels des étudiants et des enseignants. 
+ 
+9.2 Apports de la solution 
+La mise en place de cette plateforme permettra d’apporter plusieurs améliorations importantes au 
+fonctionnement des universités. 
+Tout d’abord, elle contribuera à réduire les files d’attente au niveau des services administratifs en 
+permettant aux étudiants d’effectuer certaines démarches directement en ligne. 
+Elle permettra également d’accélérer le traitement de certaines demandes administratives grâce à 
+l’automatisation de certaines procédures. 
+Au niveau pédagogique, la plateforme offrira aux étudiants un accompagnement plus personnalisé, 
+en leur proposant des outils d’aide à la révision basés sur l’analyse de leurs performances. 
+Les enseignants pourront également bénéficier d’outils d’analyse leur permettant de mieux 
+comprendre les besoins des étudiants et d’adapter leurs méthodes pédagogiques. 
+ 
+9.3 Vision finale 
+Ce projet s’inscrit dans une démarche de modernisation du système universitaire à travers 
+l’utilisation des technologies numériques et de l’intelligence artificielle. 
+L’objectif est de créer un environnement universitaire plus efficace, plus interactif et plus adapté 
+aux besoins des étudiants et des enseignants. 
+À long terme, ce type de plateforme pourrait contribuer à transformer la manière dont les 
+universités gèrent leurs services administratifs et accompagnent leurs étudiants dans leur réussite 
+académique. 
+ 
+ 
+ 
+ 
